@@ -12,19 +12,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return render_template("main.html")
+    return render_template("game.html")
 
 @app.route("/on")
 def on():
-    print("Onnnnnnn")
+    print("LED is ON")
     GPIO.output(led, GPIO.HIGH)
-    return render_template("main.html")
+    return render_template("on.html")
 
 @app.route("/off")
 def off():
-    print("Offffffffffffff")
+    print("LED is OFF")
     GPIO.output(led, GPIO.LOW)
-    return render_template("main.html")
+    return render_template("off.html")
 
 
 if __name__ == '__main__':
