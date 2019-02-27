@@ -1,0 +1,26 @@
+sudo vim /etc/dhcpcd.conf
+"""
+interface wlan0
+static ip_address=192.168.50.16/24
+static routers=192.168.50.1
+static domain_name_servers=192.168.50.1
+"""
+
+sudo vim /etc/network/interfaces
+"""
+source-directory /etc/network/interfaces.d
+
+auto lo
+iface lo inet loopback
+
+iface eth0 inet manual
+
+allow-hotplug wlan0
+iface wlan0 inet static
+address 192.168.50.16
+netmask 255.255.255.0
+gateway 192.168.50.1
+wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
+"""
+
+sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
