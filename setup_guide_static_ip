@@ -24,3 +24,7 @@ wpa-conf /etc/wpa_supplicant/wpa_supplicant.conf
 """
 
 sudo vim /etc/wpa_supplicant/wpa_supplicant.conf
+
+To kill process:
+ps -ef | grep python3
+sudo kill -9 <name>
