@@ -13,16 +13,58 @@
 	<script src="static/js/lib/jquery.min.js"></script>
 	<script src="static/js/JSgame.js"></script>
 	<link rel="stylesheet" href="static/css/style.css">
+	<script type="text/javascript">
+		var InverseCaesarShift = function(str, key) {
+			var output = '';
+			for (var i=0; i<str.length; i++) {
+				var c = str[i];
+				if (c.match(/[a-z]/i)) {
+					var code = str.charCodeAt(i);
+					if ((code >= 65) && (code <= 90))
+						c = String.fromCharCode((code - 65 + 26 - key) % 26 + 65);
+					else if ((code >= 97) && (code <= 122))
+						c = String.fromCharCode((code - 97 + 26 - key) % 26 + 97);
+				}
+				else
+					return "Not valid input";
+				output += c;
+			}
+			return output;
+		}
+		function decode() {
+			var dl = document.getElementById("droplist");
+			var key = dl.options[dl.selectedIndex].value;
+			var cw = document.getElementById("cw").value;
+			result = InverseCaesarShift(cw, key);
+			// console.log(result)
+			document.getElementById("result").value = result;
+		}
+	</script>
 </head>
 
 <body>
-	<h1>Turn on All the Lights!!!</h1>
+	<h1 style="color: #ff9800">Turn on All the Lights!!!</h1>
 	<div class="container">
 	</div>
-	<p>
+	<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
 		<button class="retry">Restart</button>
 		<button class="check">Check</button>
-	</p>
+	</div>
+
+	<div style="text-align: center;margin-top: 100px;margin-bottom: 50px;color:white">
+		Caesar Cipher Decoder
+		<p style="font-size: 18px;color:orange"><b>Key: </b></p>
+		<select id="droplist">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+		</select>
+		<p style="font-size: 18px;color:orange"><b>Codeword:</b></p>
+		<input id="cw" type="text" style="width: 15%;font-size: 20px;color: white;background: black;border: 1px solid orange;"><br><br>
+		<button style="padding:4px 10px;" type="button" onclick="decode()">Decode</button><br><br>
+		<input type="text" id="result" style="width: 15%;font-size: 20px;color: white;background: black;border: 1px solid orange;">
+	</div>
 </body>
 
 </html>
