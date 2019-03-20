@@ -80,7 +80,7 @@ $(function() {
 	$(".retry").on("click", function() {
 		console.log(arrLength);
 		console.log(arr);
-		// console.log('jQuery版本：' + $.fn.jquery);
+		// console.log('jQuery ver：' + $.fn.jquery);
 		var reTryArr = [];
 		for (var k = 0; k < arrLength; k++) {
 			reTryArr[k] = [];

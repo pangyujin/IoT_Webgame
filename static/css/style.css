@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 40px;
+  background-image: url("img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin-top: 60px;
+}
+
+.row {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0px;
+}
+
+.box {
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  border: hidden;
+  margin-right: -5px;
+  margin-bottom: -5px;
+}
+
+.unselected {
+  background-image: url("img/bulb_off.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+.selected {
+  background-image: url("img/bulb_on.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+p {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input {
+  height: 30px;
+  width: 100px;
+}
+
+button {
+  height: 30px;
+  width: 60px;
+  font-size: 16px;
+}

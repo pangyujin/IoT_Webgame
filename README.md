@@ -1,2 +1,3 @@
-# IoT_Webgame
-Fully functional version 1.0
+# IoT_Webgame Ver 2.0
+Development of more features and effects
+UI improving......
