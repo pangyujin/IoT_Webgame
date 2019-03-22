@@ -13,6 +13,9 @@
 	<script src="static/js/lib/jquery.min.js"></script>
 	<script src="static/js/JSgame.js"></script>
 	<link rel="stylesheet" href="static/css/style.css">
+
+	<link rel="stylesheet" type="text/css" media="screen" href="static/css/minecraft-webfont.css" />
+
 	<script type="text/javascript">
 		var InverseCaesarShift = function(str, key) {
 			var output = '';
@@ -43,7 +46,7 @@
 </head>
 
 <body>
-	<h1 style="color: #ff9800">Turn on All the Lights!!!</h1>
+	<h1>Turn on All the Lights!!!</h1>
 	<div class="container">
 	</div>
 	<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
@@ -52,18 +55,18 @@
 	</div>
 
 	<div style="text-align: center;margin-top: 100px;margin-bottom: 50px;color:white">
-		Caesar Cipher Decoder
-		<p style="font-size: 18px;color:orange"><b>Key: </b></p>
+		<p style="font-family: 'Minecraft';font-size: 50px;color:white">Caesar Cipher Decoder</p>
+		<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Key: </b></p><br>
 		<select id="droplist">
 			<option value="1">1</option>
 			<option value="2">2</option>
 			<option value="3">3</option>
 			<option value="4">4</option>
 		</select>
-		<p style="font-size: 18px;color:orange"><b>Codeword:</b></p>
-		<input id="cw" type="text" style="width: 15%;font-size: 20px;color: white;background: black;border: 1px solid orange;"><br><br>
-		<button style="padding:4px 10px;" type="button" onclick="decode()">Decode</button><br><br>
-		<input type="text" id="result" style="width: 15%;font-size: 20px;color: white;background: black;border: 1px solid orange;">
+		<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Codeword:</b></p>
+		<input id="cw" type="text" style="width: 75%;height: auto;margin-top:10px"><br><br>
+		<button type="button" onclick="decode()">Decode</button><br><br>
+		<input type="text" id="result" style="width: 75%;height: auto;margin-top:10px">
 	</div>
 </body>
 

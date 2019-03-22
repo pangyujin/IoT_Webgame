@@ -14,11 +14,11 @@ app = Flask(__name__)
 def index():
     return render_template("game.html")
 
-@app.route("/on")
+@app.route("/Oo0ooO0o0On")
 def on():
     print("LED is ON")
     GPIO.output(led, GPIO.HIGH)
-    return render_template("on.html")
+    return render_template("Oo0ooO0o0On.html")
 
 @app.route("/off")
 def off():

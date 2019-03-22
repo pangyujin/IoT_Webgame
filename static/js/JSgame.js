@@ -7,6 +7,14 @@ $(function() {
 		}
 	}
 
+	var textarr = [
+		["A", "A", "B", "F", "R"],
+		["Q", "J", "B", "X", "D"],
+		["W", "X", "O", "C", "C"],
+		["A", "D", "W", "L", "A"],
+		["R", "B", "Q", "V", "C"],
+	]
+
 	var arrLength;
 	function draw(arr) {
 		$(".container").empty();
@@ -24,6 +32,16 @@ $(function() {
 					})
 					.attr("value", arr[i][j])
 					.attr("position", i + "," + j)
+			}
+		}
+
+		for (var i = 0; i < arr.length; i++) {
+			for (var j = 0; j< arr[i].length; j++) {
+				var temp = $(".container").children(".row").eq(i).children("div").eq(j)
+				.append("<p></p>")
+				var tempp = $(".container").children(".row").eq(i).children("div").eq(j).children("p")
+				.addClass("TEXT")
+				.append(textarr[i][j])
 			}
 		}
 
@@ -70,7 +88,7 @@ $(function() {
 		}
 		if (flag) {
 			alert("You did it!!");
-			window.location.href="/on";
+			window.location.href="/Oo0ooO0o0On";
 		} else {
 			alert("Wrong! Try again");
 			console.log("wrong");
