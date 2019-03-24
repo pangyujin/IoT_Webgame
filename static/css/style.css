@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font-family: 'Minecraft';
+  font-size: 60px;
+  color: white;
+  background: black;
+  border: 4px solid orange;
+  border-style:dashed;
+}
+
+body {
+  padding-top: 40px;
+  background-color: #000000;
+  background-image: url("img/background.png");
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Minecraft';
+  font-size: 50px;
+  color: orange;
+}
+
+.TEXT {
+  color: #ffeb00;
+  z-index: -1;
+  font-size: 20px;
+  font-family: 'Minecraft';
+  text-align: center;
+}
+
+.container {
+  margin-top: 60px;
+}
+
+.row {
+  width: auto;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0px;
+}
+
+.box {
+  display: inline-block;
+  height: 160px;
+  width: 160px;
+  border: hidden;
+  margin-right: -5px;
+  margin-bottom: -5px;
+}
+
+.unselected {
+  background-image: url("img/bulb_off.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+
+}
+
+.selected {
+  background-image: url("img/bulb_on.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+
+p {
+  margin-top: 30px;
+  text-align: center;
+}
+
+input {
+  height: 30px;
+  width: 100px;
+}
+
+button {
+  border: 2px solid black;
+  border-radius: 20px;
+  border-style: outset;
+  background-color: black;
+  border-color: #ff9800;
+  color: orange;
+  padding: 14px 28px;
+  font-family: 'Minecraft';
+  font-size: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+button:hover {
+  background: #ff9800;
+  color: white;
+}
+
+/* The container must be positioned relative: */
+#droplist {
+  -webkit-appearance: none;
+  border: 5px solid orange;
+  background-color: black;
+  border-radius: 20px;
+  position: relative;
+  font-family: 'Minecraft';
+  text-align: center;
+  font-size: 30px;
+  color: orange;
+  width: 7%;
+  height: auto;
+  padding: 10px 10px;
+}
