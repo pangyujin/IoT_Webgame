@@ -4,7 +4,7 @@
 }
 
 input {
-  font-family: 'Minecraft';
+  font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;
   font-size: 60px;
   color: white;
   background: black;
@@ -31,7 +31,7 @@ h1 {
   color: #ffeb00;
   z-index: -1;
   font-size: 20px;
-  font-family: 'Minecraft';
+  font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;
   text-align: center;
 }
 
