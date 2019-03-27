@@ -11,6 +11,8 @@ var InverseCaesarShift = function(str, key) {
     }
     else if (c === ' ')
       c = ' ';
+    else if (c === '\n')
+      c = '\n'
     else
       return "Not valid input";
     output += c;

@@ -23,17 +23,19 @@
 </head>
 
 <body>
-	<h1>Back to the beginning of the story...</h1>
-	<p style="font-size:25px;text-align:left;color:white;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;;margin-left:5%;margin-right:5%;">
-		Once upon a time, the world was no longer peaceful when it was controlled by a powerful tyrant named <span style="color:red;">Caesar</span> the Great. He was an emperor who was crazy for power and engaged in wars. Caesar managed to absorb all the lights and let the world overwhelmed by chaos. After accomplishing his evil plan. He used <span style="color:red;">the third key</span> to perform a spell to seal the all the light together with some unknowns into 25 light bulbs. After a few days, Caesar died suddenly and the only thing he left behind was a letter full of mysterious:
+	<h1>Welcome to the Last Room</h1>
+	<p style="font-size:25px;text-align:left;color:white;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;;margin-left:20%;margin-right:20%;">
+		Someone suspect that Professor X may hide in this room, which is guarded by the guardian Caesar. The room is full of darkness, so you need to turn on the light by completing the game given by Caesar. When all the lights are turned on, the lightness will be brought to your world.
+		<br><br><span style="text-align:center;">The only clue Caesar left is stated below:</span>
 	</p>
-	<p style="font-size:30px;text-align:center;color:#FFD700;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;margin-bottom: 25%;margin-left:5%;margin-right:5%;">
-		The light is sealed but 10 unknowns sneaked in
-		<br>One changed, surroundings induced
-		<br>Light will be unleashed with all lights ON
-		<br>Eliminate <span style="color:red;">unknowns</span> then truth comes out<br><br><br><br><br><br>
-		<span style="color:grey;">HINT: Caesar Cipher: Codeword = (message + key) (mod 26)<br>unknowns: something common in MATH<br>Think about highlighted words!</span>
+	<p style="font-size:30px;text-align:center;color:#FFD700;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;margin-bottom: 10%;margin-left:5%;margin-right:5%;">
+		each bulb has one <span style="color:#E24C2B">LETTER</span>
+		<br><span style="color:#E24C2B">DECODE</span> them with the <span style="color:#E24C2B">CORRECT KEY</span>
+		<br>among the 25 decoded letters
+		<br>eliminate 10 <span style="color:#E24C2B">UNKNOWNS</span>
+		<br>the <span style="color:#E24C2B">REST</span> are the answer to the truth<br><br><br><br><br><br>
 	</p>
+	<!-- part2 -->
 	<h1>Turn on All the Lights!!!</h1>
 	<div class="container">
 	</div>
@@ -41,7 +43,7 @@
 		<button class="retry">Restart</button>
 		<button class="check">Check</button>
 	</div>
-
+	<!-- part3 -->
 	<div style="text-align: center;margin-top: 20%;margin-bottom: 30%;color:white">
 		<p style="font-family: 'Minecraft';font-size: 50px;color:white">Caesar Cipher Decoder</p>
 		<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Key: </b></p><br>
@@ -52,9 +54,12 @@
 			<option value="4">4</option>
 		</select>
 		<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Codeword:</b></p>
-		<input id="cw" type="text" style="width: 75%;height: auto;margin-top:10px"><br><br>
+
+		<textarea id="cw" cols="20" rows="5"></textarea><br><br>
+		<!-- <input id="cw" type="text" style="width: 75%;height: auto;margin-top:10px"><br><br> -->
 		<button type="button" onclick="decode()">Decode</button><br><br>
-		<input type="text" id="result" style="width: 75%;height: auto;margin-top:10px">
+		<!-- <input type="text" id="result" style="width: 75%;height: auto;margin-top:10px"> -->
+		<textarea id="result" cols="20" rows="5"></textarea>
 	</div>
 </body>
 
