@@ -17,11 +17,11 @@ $(function() {
 
 	var arrLength;
 	function draw(arr) {
-		$(".container").empty();
+		$(".Containers").empty();
 		for (var i = 0; i < arr.length; i++) {
-			var parent = $(".container").append("<div></div>").children("div").eq(i).addClass("row");
+			var parent = $(".Containers").append("<div></div>").children("div").eq(i).addClass("row");
 			for (var j = 0; j < arr[i].length; j++) {
-				var temp = $(".container").children(".row").eq(i)
+				var temp = $(".Containers").children(".row").eq(i)
 					.append("<div></div>")
 					.find("div").eq(j).addClass("box").addClass(function() {
 						if (!arr[i][j]) {
@@ -37,9 +37,9 @@ $(function() {
 
 		for (var i = 0; i < arr.length; i++) {
 			for (var j = 0; j< arr[i].length; j++) {
-				var temp = $(".container").children(".row").eq(i).children("div").eq(j)
+				var temp = $(".Containers").children(".row").eq(i).children("div").eq(j)
 				.append("<p></p>")
-				var tempp = $(".container").children(".row").eq(i).children("div").eq(j).children("p")
+				var tempp = $(".Containers").children(".row").eq(i).children("div").eq(j).children("p")
 				.addClass("TEXT")
 				.append(textarr[i][j])
 			}
