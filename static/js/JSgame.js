@@ -1,4 +1,6 @@
 $(function() {
+	var count = 0;
+
 	var arr = new Array();
 	for (var k = 0; k < 5; k++) {
 		arr[k] = new Array();
@@ -8,11 +10,11 @@ $(function() {
 	}
 
 	var textarr = [
-		["A", "A", "B", "F", "R"],
-		["Q", "J", "B", "X", "D"],
-		["W", "X", "O", "C", "C"],
-		["A", "D", "W", "L", "A"],
-		["R", "B", "Q", "V", "C"],
+		["A", "B", "C", "F", "R"],
+		["Q", "J", "A", "X", "D"],
+		["W", "X", "O", "B", "C"],
+		["A", "D", "W", "L", "B"],
+		["R", "C", "Q", "V", "A"],
 	]
 
 	var arrLength;
@@ -96,8 +98,8 @@ $(function() {
 	})
 
 	$(".retry").on("click", function() {
-		console.log(arrLength);
-		console.log(arr);
+		// console.log(arrLength);
+		// console.log(arr);
 		// console.log('jQuery ver：' + $.fn.jquery);
 		var reTryArr = [];
 		for (var k = 0; k < arrLength; k++) {
@@ -109,6 +111,16 @@ $(function() {
 		arr = reTryArr;
 
 		draw(arr);
+
+		count += 1;
+		console.log('count: ' + count);
+		if (count == 3){
+			alert("Hint 1:\n Caesar Cipher Decoding example:\n key=1 CDEFG -> BCDEF\n\nHint 2:\n Unknowns: What are the common unknowns in maths?")
+		}
+		if (count >= 10){
+			alert("Hint 1:\n Choose Key=3. Decode the letters on the bulb\n\nHint 2:\n After Decoding, remove all 'X' 'Y' 'Z'")
+		}
+
 	})
 
 	draw(arr);
