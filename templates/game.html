@@ -13,8 +13,10 @@
 
 	<link rel="stylesheet" href="static/css/style.css">
 	<link rel="stylesheet" type="text/css" media="screen" href="static/css/minecraft-webfont.css" />
+	<link rel="stylesheet" href="static/css/lib/bootstrap.min.css">
 
 	<script src="static/js/lib/jquery.min.js"></script>
+	<script src="static/js/lib/bootstrap.min.js"></script>
 	<script src="static/js/JSgame.js"></script>
 	<script src="static/js/Decoder.js"></script>
 
@@ -22,49 +24,74 @@
 
 </head>
 
-<body>
-	<h1>Welcome to the last room</h1><br><br>
-	<p style="font-size:25px;text-align:left;color:white;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;;margin-left:4em;margin-right:4em;">
-		Someone suspect that Professor X may hide in this room, which is guarded by the guardian Caesar.
-		<br><br>The room is full of darkness, so you need to turn on the light by completing the game given by Caesar.
-		<br><br>Once you turn on/off one light, the one next to it will be affected.
-		<br><br>When all the lights are turned on, the lightness will be brought to your world.
-		<br><br><span style="text-align:center;">The only clue Caesar left is stated below:</span>
-	</p>
-	<p style="font-size:30px;text-align:center;color:#FFD700;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;margin-bottom: 3%;margin-left:5%;margin-right:5%;">
-		<br><br>
-		one <span style="color:#E24C2B">LETTER</span> on each bulb
-		<br><br><span style="color:#E24C2B">DECODE</span> them with the <span style="color:#E24C2B">CORRECT KEY</span>
-		<br><br>among the 25 decoded letters
-		<br><br>eliminate <span style="color:#E24C2B">10 UNKNOWNS</span>
-		<br><br>the <span style="color:#E24C2B">REST</span> are the answer to the truth<br><br><br><br><br><br>
-	</p>
-	<!-- part2 -->
-	<h1>Turn on All the Lights!!!</h1>
-	<div class="Containers">
-	</div>
-	<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
-		<button class="retry">Restart</button>
-		<button class="check">Check</button>
-	</div>
-	<!-- part3 -->
-	<div style="text-align: center;margin-top: 20%;margin-bottom: 30%;color:white">
-		<p style="font-family: 'Minecraft';font-size: 50px;color:white">Caesar Cipher Decoder</p>
-		<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Key: </b></p><br>
-		<select id="droplist">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-		</select>
-		<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Codeword:</b></p>
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+	  <ul class="navbar-nav">
+	    <li class="nav-item">
+	      <a class="nav-link" href="#section1">INTRO</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#section2">GAME</a>
+	    </li>
+	    <li class="nav-item">
+	      <a class="nav-link" href="#section3">TOOLBOX</a>
+	    </li>
+	  </ul>
+	</nav>
 
-		<textarea id="cw" cols="20" rows="5"></textarea><br><br>
-		<!-- <input id="cw" type="text" style="width: 75%;height: auto;margin-top:10px"><br><br> -->
-		<button type="button" onclick="decode()">Decode</button><br><br>
-		<!-- <input type="text" id="result" style="width: 75%;height: auto;margin-top:10px"> -->
-		<textarea id="result" cols="20" rows="5"></textarea>
+	<!-- part1 -->
+	<div id="section1"  style="padding-top:50px">
+		<h1>Welcome to the last room</h1><br><br>
+		<p style="font-size:25px;text-align:left;color:white;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;;margin-left:4em;margin-right:4em;">
+			Someone suspect that Professor X may hide in this room, which is guarded by the guardian Caesar.
+			<br><br>The room is full of darkness, so you need to turn on the light by completing the game given by Caesar.
+			<br><br>Once you turn on/off one light, the one next to it will be affected.
+			<br><br>When all the lights are turned on, the lightness will be brought to your world.
+			<br><br><span style="text-align:center;">The only clue Caesar left is stated below:</span>
+		</p>
+		<p style="font-size:30px;text-align:center;color:#FFD700;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;margin-bottom: 3%;margin-left:5%;margin-right:5%;">
+			<br><br>
+			one <span style="color:#E24C2B">LETTER</span> on each bulb
+			<br><br><span style="color:#E24C2B">DECODE</span> them with the <span style="color:#E24C2B">CORRECT KEY</span>
+			<br><br>among the 25 decoded letters
+			<br><br>eliminate <span style="color:#E24C2B">10 UNKNOWNS</span>
+			<br><br>the <span style="color:#E24C2B">REST</span> are the answer to the truth<br><br><br><br><br><br>
+		</p>
 	</div>
+
+	<!-- part2 -->
+	<div id="section2" style="padding-top:50px">
+		<h1>Turn on All the Lights!!!</h1>
+		<div class="Containers">
+		</div>
+		<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
+			<button id="bt1"class="retry">Restart</button>
+			<button id="bt2" class="check">Check</button>
+		</div>
+	</div>
+
+	<!-- part3 -->
+	<div id="section3" style="padding-top:50px;padding-bottom:50px">
+		<div style="text-align: center;margin-bottom: 30%;color:white">
+			<p style="font-family: 'Minecraft';font-size: 50px;color:white">Caesar Cipher Decoder</p>
+			<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Choose a Key: </b></p><br>
+			<select id="droplist">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+			</select>
+			<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Codeword:</b></p>
+
+			<textarea class="txtarea" id="cw" cols="20" rows="5"></textarea><br><br>
+			<!-- <input id="cw" type="text" style="width: 75%;height: auto;margin-top:10px"><br><br> -->
+			<button id="bt3" type="button" onclick="decode()">Decode</button><br><br>
+			<!-- <input type="text" id="result" style="width: 75%;height: auto;margin-top:10px"> -->
+			<textarea class="txtarea" id="result" cols="20" rows="5"></textarea>
+		</div>
+	</div>
+
+
 </body>
 
 </html>

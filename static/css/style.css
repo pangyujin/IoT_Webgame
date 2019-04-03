@@ -24,20 +24,21 @@ h1 {
   font-size: 20px;
   font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;
   text-align: center;
+  margin-top: 30px;
 }
 
 .Containers {
   margin-top: 60px;
 }
 
-.row {
+.Rows {
   width: auto;
   margin: 0 auto;
   text-align: center;
   font-size: 0px;
 }
 
-.box {
+.Boxes {
   display: inline-block;
   height: 160px;
   width: 160px;
@@ -64,7 +65,7 @@ p {
   text-align: center;
 }
 
-textarea {
+.txtarea {
   font-family: 'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;
   font-size: 40px;
   color: white;
@@ -73,7 +74,7 @@ textarea {
   border-style:dashed;
 }
 
-button {
+#bt1 {
   border: 2px solid black;
   border-radius: 20px;
   border-style: outset;
@@ -88,7 +89,47 @@ button {
   margin-right: 20px;
 }
 
-button:hover {
+#bt1:hover {
+  background: #ff9800;
+  color: white;
+}
+
+#bt2 {
+  border: 2px solid black;
+  border-radius: 20px;
+  border-style: outset;
+  background-color: black;
+  border-color: #ff9800;
+  color: orange;
+  padding: 14px 28px;
+  font-family: 'Minecraft';
+  font-size: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#bt2:hover {
+  background: #ff9800;
+  color: white;
+}
+
+#bt3 {
+  border: 2px solid black;
+  border-radius: 20px;
+  border-style: outset;
+  background-color: black;
+  border-color: #ff9800;
+  color: orange;
+  padding: 14px 28px;
+  font-family: 'Minecraft';
+  font-size: 40px;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#bt3:hover {
   background: #ff9800;
   color: white;
 }
@@ -100,10 +141,10 @@ button:hover {
   background-color: black;
   border-radius: 20px;
   position: relative;
-  font-family: 'Minecraft';
+  /* font-family: 'Minecraft'; */
   text-align: center;
   font-size: 30px;
-  color: orange;
+  color: white;
   width: 10%;
   height: auto;
   padding: 10px 10px;

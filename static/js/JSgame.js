@@ -21,11 +21,11 @@ $(function() {
 	function draw(arr) {
 		$(".Containers").empty();
 		for (var i = 0; i < arr.length; i++) {
-			var parent = $(".Containers").append("<div></div>").children("div").eq(i).addClass("row");
+			var parent = $(".Containers").append("<div></div>").children("div").eq(i).addClass("Rows");
 			for (var j = 0; j < arr[i].length; j++) {
-				var temp = $(".Containers").children(".row").eq(i)
+				var temp = $(".Containers").children(".Rows").eq(i)
 					.append("<div></div>")
-					.find("div").eq(j).addClass("box").addClass(function() {
+					.find("div").eq(j).addClass("Boxes").addClass(function() {
 						if (!arr[i][j]) {
 							return "unselected";
 						} else {
@@ -39,15 +39,15 @@ $(function() {
 
 		for (var i = 0; i < arr.length; i++) {
 			for (var j = 0; j< arr[i].length; j++) {
-				var temp = $(".Containers").children(".row").eq(i).children("div").eq(j)
+				var temp = $(".Containers").children(".Rows").eq(i).children("div").eq(j)
 				.append("<p></p>")
-				var tempp = $(".Containers").children(".row").eq(i).children("div").eq(j).children("p")
+				var tempp = $(".Containers").children(".Rows").eq(i).children("div").eq(j).children("p")
 				.addClass("TEXT")
 				.append(textarr[i][j])
 			}
 		}
 
-		$(".box").on("click", function() {
+		$(".Boxes").on("click", function() {
 			var posArr = $(this).attr("position").split(",");
 			var x = +posArr[0];
 			var y = +posArr[1];
@@ -114,11 +114,11 @@ $(function() {
 
 		count += 1;
 		console.log('count: ' + count);
-		if (count == 3){
+		if (count == 2){
 			alert("Hint 1:\n Caesar Cipher Decoding example:\n key=1 CDEFG -> BCDEF\n\nHint 2:\n Unknowns: What are the common unknowns in maths?")
 		}
-		if (count >= 10){
-			alert("Hint 1:\n Choose Key=3. Decode the letters on the bulb\n\nHint 2:\n After Decoding, remove all 'X' 'Y' 'Z'")
+		if (count >= 5){
+			alert("Hint 1:\n Choose Key=3. Decode the letters on the bulb\n\nHint 2:\n After Decoding, remove all 'X' 'Y' 'Z', click the rest bulbs")
 		}
 
 	})
