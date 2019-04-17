@@ -18,7 +18,7 @@ def index():
 def on():
     print("LED is ON")
     GPIO.output(led, GPIO.HIGH)
-    return render_template("Oo0ooO0o0On.html")
+    return render_template("on.html")
 
 @app.route("/off")
 def off():

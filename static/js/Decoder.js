@@ -14,7 +14,7 @@ var InverseCaesarShift = function(str, key) {
     else if (c === '\n')
       c = '\n'
     else
-      return "Not valid input";
+      return "Not valid input\nLetters ONLY";
     output += c;
   }
   return output;

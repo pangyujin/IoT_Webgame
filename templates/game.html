@@ -28,50 +28,56 @@
 	<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 	  <ul class="navbar-nav">
 	    <li class="nav-item">
-	      <a class="nav-link" href="#section1">INTRO</a>
+	      <a class="nav-link" href="#section1" style="font-size:30px;text-align:center;">INTRO</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="#section2">GAME</a>
+	      <a class="nav-link" href="#section2" style="font-size:30px;text-align:center;">GAME</a>
 	    </li>
 	    <li class="nav-item">
-	      <a class="nav-link" href="#section3">TOOLBOX</a>
+	      <a class="nav-link" href="#section3" style="font-size:30px;text-align:center;">TOOLBOX</a>
 	    </li>
 	  </ul>
 	</nav>
 
 	<!-- part1 -->
-	<div id="section1"  style="padding-top:50px">
+	<div id="section1"  style="padding-top:70px">
 		<h1>Welcome to the last room</h1><br><br>
-		<p style="font-size:25px;text-align:left;color:white;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;;margin-left:4em;margin-right:4em;">
-			Someone suspect that Professor X may hide in this room, which is guarded by the guardian Caesar.
-			<br><br>The room is full of darkness, so you need to turn on the light by completing the game given by Caesar.
-			<br><br>Once you turn on/off one light, the one next to it will be affected.
-			<br><br>When all the lights are turned on, the lightness will be brought to your world.
-			<br><br><span style="text-align:center;">The only clue Caesar left is stated below:</span>
-		</p>
-		<p style="font-size:30px;text-align:center;color:#FFD700;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;margin-bottom: 3%;margin-left:5%;margin-right:5%;">
+		<div style="width:800px;margin-left:auto;margin-right:auto;">
+			<p style="font-size:25px;text-align:left;color:white;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;;margin-left:1em;margin-right:1em;">
+				Welcome to the last room! This room is the last challenge that Professor X left for you, but the room is all dark now. So before you go in, please try your best to solve the following puzzle on this page:
+				<br><br>25 bulbs in a 5x5 matrix are initially all turned off. When you click one of the bulbs, itself and its adjacent bulbs will flip the status (on->off, off->on). Please try your best to turn on all of them. After all the lights have been turned on, the magic will happen in this room!
+				<br><br><span style="text-align:center;color:#FFD700">Professor X has left a clue for you:</span>
+			</p>
+		</div>
+
+		<!-- color:#FFD700 -->
+		<p style="font-size:30px;text-align:center;color:white;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;margin-bottom: 3%;margin-left:5%;margin-right:5%;">
 			<br><br>
-			one <span style="color:#E24C2B">LETTER</span> on each bulb
-			<br><br><span style="color:#E24C2B">DECODE</span> them with the <span style="color:#E24C2B">CORRECT KEY</span>
+			each bulb has a letter on it
+			<br><br><span style="color:#E24C2B">decode</span> them with the <span style="color:#E24C2B">correct key</span> using <span style="color:#E24C2B">Caesar Cipher</span>
 			<br><br>among the 25 decoded letters
-			<br><br>eliminate <span style="color:#E24C2B">10 UNKNOWNS</span>
-			<br><br>the <span style="color:#E24C2B">REST</span> are the answer to the truth<br><br><br><br><br><br>
+			<br><br><span style="color:#E24C2B">eliminate 10 unknowns</span>
+			<br><br><span style="color:#E24C2B">the rest part</span> will lead you to the truth<br>
 		</p>
 	</div>
 
 	<!-- part2 -->
-	<div id="section2" style="padding-top:50px">
+	<div id="section2" style="padding-top:70px">
 		<h1>Turn on All the Lights!!!</h1>
+		<p style="font-size:25px;text-align:center;color:grey;font-family:'Comic Sans', 'Comic Sans MS', 'Chalkboard', 'ChalkboardSE-Regular', sans-serif;;margin-left:auto;margin-right:auto;">
+			<br>Please click the "Submit" button when you finish the game.
+			<br>You may use "Restart" button to reset the game.
+		</p>
 		<div class="Containers">
 		</div>
 		<div style="text-align: center;margin-top: 50px;margin-bottom: 50px;">
 			<button id="bt1"class="retry">Restart</button>
-			<button id="bt2" class="check">Check</button>
+			<button id="bt2" class="check">Submit</button>
 		</div>
 	</div>
 
 	<!-- part3 -->
-	<div id="section3" style="padding-top:50px;padding-bottom:50px">
+	<div id="section3" style="padding-top:60px;padding-bottom:50px">
 		<div style="text-align: center;margin-bottom: 30%;color:white">
 			<p style="font-family: 'Minecraft';font-size: 50px;color:white">Caesar Cipher Decoder</p>
 			<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Choose a Key: </b></p><br>
@@ -81,11 +87,11 @@
 				<option value="3">3</option>
 				<option value="4">4</option>
 			</select>
-			<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Codeword:</b></p>
+			<p style="font-family: 'Minecraft';font-size: 50px;color:orange"><b>Type Your Codeword Here:</b></p>
 
 			<textarea class="txtarea" id="cw" cols="20" rows="5"></textarea><br><br>
 			<!-- <input id="cw" type="text" style="width: 75%;height: auto;margin-top:10px"><br><br> -->
-			<button id="bt3" type="button" onclick="decode()">Decode</button><br><br>
+			<button id="bt3" type="button" onclick="decode()">Click to Decode</button><br><br>
 			<!-- <input type="text" id="result" style="width: 75%;height: auto;margin-top:10px"> -->
 			<textarea class="txtarea" id="result" cols="20" rows="5"></textarea>
 		</div>
